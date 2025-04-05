@@ -1,0 +1,43 @@
+.navbar {
+  background-color: black;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+
+  ul {
+    display: flex;
+    gap: 90px;
+    list-style: none;
+    padding: 10px;
+    margin: 0;
+
+    li {
+      a {
+        color: white;
+        text-decoration: none;
+        font-size: 1rem;
+        font-weight: bold;
+        transition: color 0.3s ease-in-out;
+
+        &:hover {
+          color: #bbb;
+        }
+
+        &.active {
+          padding-bottom: 2px;
+          border-bottom: 2px solid white;
+        }
+      }
+    }
+  }
+}
+
+.logo {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+}
+
+.profileIcon {
+  padding: 3px;
+}

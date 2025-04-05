@@ -1,0 +1,99 @@
+.profileContainer {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.profileCard {
+  background: white;
+  padding: 30px;
+  margin-top: 50px;
+  width: 90%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.profileTitle {
+  font-size: 2em;
+  font-weight: bold;
+  margin-bottom: 20px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #0004;
+  text-align: center;
+}
+
+.profileContent {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  flex-direction: column;
+  margin-left: 0;
+}
+
+.avatarContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  border: 2px solid #ddd;
+}
+
+.uploadBtn {
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+  background: #ddd;
+  padding: 5px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.userInfo {
+  width: 100%;
+
+  p {
+    margin: 15px 0;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    border-bottom: 2px solid #0004;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease;
+
+    &:focus {
+      border-color: black;
+    }
+  }
+}
+
+.editBtn {
+  display: block;
+  margin: 30px auto 0;
+  background: black;
+  color: white;
+  width: 500px;
+  padding: 10px 20px;
+  border-radius: 10px;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  transition: background 0.3s ease;
+
+  &:hover {
+    background: #333;
+  }
+}

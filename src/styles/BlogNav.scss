@@ -1,0 +1,103 @@
+// Navbar.scss
+
+.blognav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px;
+  background-color: #2b6cb0;
+  color: white;
+
+  .navbar-dropdown {
+    position: relative;
+
+    .navbar-dropdown-btn {
+      padding: 10px 20px;
+      background: none;
+      border: none;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+    }
+
+    .navbar-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: black;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      border-radius: 4px;
+      min-width: 300px;
+      z-index: 1;
+
+      ul {
+        margin: 20px;
+        padding: 20px;
+        list-style: none;
+        
+
+        .navbar-dropdown-link {
+          display: block;
+          padding: 10px 20px;
+          text-decoration: none;
+          border: none;
+          background: none;
+          color: white;
+          border-bottom: 3px solid #2d3743;
+
+          &:hover {
+            color: orange;
+          }
+        }
+      }
+    }
+
+    &:hover .navbar-dropdown-menu {
+      display: block;
+    }
+  }
+
+  .navbar-title {
+    font-size: 24px;
+    font-weight: 500;
+  }
+
+  .navbar-search {
+    position: relative;
+    display: flex;
+
+    .navbar-search-btn {
+      padding: 8px;
+      background: none;
+      border: none;
+      cursor: pointer;
+
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .navbar-search-icon {
+        width: 40px;
+        height: 40px;
+        color: white;
+      }
+    }
+
+    .navbar-search-input {
+      padding: 10px;
+      margin-right: 8px;
+      margin-top: 8px;
+      background-color: white;
+      border: 2px solid black;
+      border-radius: 15px;
+      width: 200px;
+      font-size: 14px;
+      color: #2d3748;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+  }
+}

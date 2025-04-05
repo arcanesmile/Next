@@ -1,0 +1,25 @@
+.requestTab {
+  background-color: orange;
+  padding: 1rem 2rem;
+
+  ul {
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    li {
+      color: black;
+      padding: 0.75rem 1.5rem;
+      font-weight: 600;
+    }
+  }
+
+  .requestBtn {
+    border-radius: 50%;
+    color: white;
+    background: black;
+  }
+}

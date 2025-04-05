@@ -1,0 +1,94 @@
+.about-container {
+  text-align: center;
+  min-height: 100vh;
+
+  .hero {
+    background: linear-gradient(to top, rgba(0, 0, 0, 2), transparent), url('/about-img1.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 4rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    max-width: 100%;
+    font-size: 10px;
+  }
+
+  .features {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    padding: 3rem 1rem;
+  }
+
+  .feature-card {
+    max-width:600px;
+    background: white;
+    padding: 1rem;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    text-align: center;
+    margin: 3px;
+  }
+
+  .feature-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .story {
+    background: #f5f5f5;
+    padding: 3rem 1rem;
+  }
+
+  .story h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+
+  .agents {
+    padding: 3rem 1rem;
+  }
+
+  .agent-list {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+  }
+
+  .agent-card {
+    background: white;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+  }
+
+  .cta {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 2), transparent), url('/about-img2.jpg');
+    background-size: cover;
+    background-position: center;
+    color: white;
+    padding: 6rem 2rem;
+  }
+
+  .cta button {
+    background: #ff6600;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+  }
+
+  .cta button:hover {
+    background: #e65c00;
+  }
+}
