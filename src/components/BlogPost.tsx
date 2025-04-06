@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image'; // Corrected import (was lowercase before)
+import Image from 'next/image';
 import { Post } from '@/data/posts';
 import styles from '@/styles/blogPost.module.scss';
 
