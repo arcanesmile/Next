@@ -31,6 +31,11 @@ export default function Navbar() {
             Blog
           </Link>
         </li>
+        <li>
+                    <Link href="/news" className={pathname === "/news" ? styles.active : ""}>
+            News
+          </Link>
+        </li>
       </ul>
       <div className={styles.profileIcon}>
         <Link href="/user/|">
