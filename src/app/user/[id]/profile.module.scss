@@ -1,99 +1,151 @@
-.profileContainer {
-  display: flex;
-  justify-content: center;
+.profilePage {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background-color: #f9fafb;
   min-height: 100vh;
+
+  h1 {
+    font-size: 2rem;
+    color: #1f2937;
+    margin-bottom: 1.5rem;
+    text-align: center;
+  }
+}
+.    
+.signOutButton {
+  padding: 0.5rem 1rem;
+  background-color: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background-color 0.2s;
+
+  &:hover {
+    background-color: #b91c1c;
+  }
 }
 
-.profileCard {
-  background: white;
-  padding: 30px;
-  margin-top: 50px;
-  width: 90%;
-  height: 100%;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-.profileTitle {
-  font-size: 2em;
-  font-weight: bold;
-  margin-bottom: 20px;
-  padding-bottom: 10px;
-  border-bottom: 2px solid #0004;
+.error {
+  color: #dc2626;
+  background-color: #fee2e2;
+  padding: 0.75rem;
+  border-radius: 4px;
+  margin-bottom: 1rem;
   text-align: center;
 }
 
 .profileContent {
   display: flex;
-  align-items: center;
-  gap: 30px;
-  flex-direction: column;
-  margin-left: 0;
+  gap: 2rem;
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+
+  
 }
 
 .avatarContainer {
-  position: relative;
   display: flex;
-  justify-content: center;
-}
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
 
-.avatar {
-  border-radius: 50%;
-  border: 2px solid #ddd;
-}
+  .avatar {
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid #e5e7eb;
+    transition: transform 0.3s;
 
-.uploadBtn {
-  position: absolute;
-  bottom: 5px;
-  right: 5px;
-  background: #ddd;
-  padding: 5px;
-  border-radius: 50%;
-  cursor: pointer;
-  border: none;
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+
+  .uploadInput {
+    margin-top: 0.5rem;
+    font-size: 0.9rem;
+    padding: 0.5rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    cursor: pointer;
+
+    &:hover {
+      border-color: #9ca3af;
+    }
+  }
 }
 
 .userInfo {
-  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 
   p {
-    margin: 15px 0;
-    background: white;
-    border-radius: 10px;
-    padding: 10px;
-    border-bottom: 2px solid #0004;
+    margin: 0;
+    font-size: 1rem;
+    color: #4b5563;
+
+    strong {
+      color: #1f2937;
+      margin-right: 0.5rem;
+    }
   }
 
-  input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 10px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s ease;
+  .field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 
-    &:focus {
-      border-color: black;
+    label {
+      font-size: 0.9rem;
+      color: #374151;
+      font-weight: 500;
+    }
+
+    input {
+      padding: 0.5rem;
+      font-size: 1rem;
+      border: 1px solid #d1d5db;
+      border-radius: 4px;
+      outline: none;
+      transition: border-color 0.2s;
+
+      &:focus {
+        border-color: #3b82f6;
+        box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.2);
+      }
     }
   }
 }
 
 .editBtn {
-  display: block;
-  margin: 30px auto 0;
-  background: black;
+  padding: 0.75rem 1.5rem;
+  background-color: #3b82f6;
   color: white;
-  width: 500px;
-  padding: 10px 20px;
-  border-radius: 10px;
-  cursor: pointer;
   border: none;
-  font-size: 16px;
-  transition: background 0.3s ease;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: background-color 0.2s;
 
   &:hover {
-    background: #333;
+    background-color: #2563eb;
   }
+
+  &:disabled {
+    background-color: #9ca3af;
+    cursor: not-allowed;
+  }
+}
+
+.btn{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 25px;
 }
