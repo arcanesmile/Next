@@ -8,11 +8,7 @@
   background-position: center;
   gap: 2rem;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
-    text-align: center;
   }
-}
 
 .heroContent {
   max-width: 600px;
@@ -24,8 +20,9 @@
 
   p {
     margin-bottom: 1.5rem;
-    color: #666;
-    font-size: 1.125rem;
+    color: rgb(23,20,20);
+    font-size: 1.1rem;
+    font-weight: bold;
     line-height: 1.6;
   }
 }

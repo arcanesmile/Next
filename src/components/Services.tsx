@@ -1,30 +1,31 @@
 "use client";
-import React from 'react'
-import styles from '../styles/Services.module.scss'
+import React from 'react';
+import styles from '@/styles/Services.module.scss';
+import { FaCode, FaMobileAlt, FaPaintBrush } from 'react-icons/fa'; // Example icons from Font Awesome
 
 interface Service {
-  title: string
-  description: string
-  icon: string
+  title: string;
+  description: string;
+  icon: JSX.Element;
 }
 
 const servicesData: Service[] = [
   {
     title: 'Website Development',
     description: 'High-quality websites to boost your online presence.',
-    icon: '/images/icon-webdev.svg'
+    icon: <FaCode className={styles.icon} />
   },
   {
     title: 'Mobile App Development',
     description: 'Cross-platform mobile apps for iOS and Android.',
-    icon: '/images/icon-mobile.svg'
+    icon: <FaMobileAlt className={styles.icon} />
   },
   {
     title: 'UI/UX Design',
     description: 'User-centered design to create engaging experiences.',
-    icon: '/images/icon-uiux.svg'
+    icon: <FaPaintBrush className={styles.icon} />
   }
-]
+];
 
 const Services: React.FC = () => {
   return (
@@ -34,7 +35,7 @@ const Services: React.FC = () => {
         {servicesData.map((service, index) => (
           <div className={styles.card} key={index}>
             <div className={styles.iconWrapper}>
-              <img src={service.icon} alt={service.title} />
+              {service.icon}
             </div>
             <h3>{service.title}</h3>
             <p>{service.description}</p>
@@ -42,7 +43,7 @@ const Services: React.FC = () => {
         ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;

@@ -1,3 +1,4 @@
+
 import styles from './newsPage.module.scss';
 
 interface Article {

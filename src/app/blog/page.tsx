@@ -23,14 +23,17 @@ const BlogPage = () => {
 
   if (isLoading) return <div className={styles.loading}>Loading posts...</div>;
   if (error) return <div className={styles.error}>Error loading posts: {error.message}</div>;
+  if (!posts || posts.length === 0) return <div className={styles.error}>No posts available</div>;
 
   return (
     <main className={styles.main}>
-      <BlogPost 
-        posts={posts || []} 
-        searchQuery={searchQuery} 
-        category={selectedCategory} 
-      />
+      <div className={styles.postsGrid}>
+        <BlogPost 
+          posts={posts || []} 
+          searchQuery={searchQuery}
+          category={selectedCategory}
+        />
+      </div>
     </main>
   );
 };
