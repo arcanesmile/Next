@@ -1,0 +1,64 @@
+.signin-wrapper {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to right, rgba(247, 247, 255, 0.7), rgba(224, 223, 255, 0.7));
+  padding: 1rem;
+  backdrop-filter: blur(20px);
+  
+}
+.signin-container {  
+   background: linear-gradient(90deg, #333333, #666666);
+  padding: 8rem;
+  border-radius: 1.25rem;
+  box-shadow: 0 10px 30px rgba(108, 75, 193, 0.1);
+  max-width: 405px;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.3s ease;
+  
+  &:hover {
+    transform: translateY(-5px);
+  }
+}
+
+.signin-art {
+  width: 100px;
+  height: 100px;
+  margin: 0 auto 1.2rem auto;
+  
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.signin-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: white;
+  color: white;
+  
+  span {
+    background: linear-gradient(90deg, #6c4bc1, #8e77f9);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease forwards;
+}

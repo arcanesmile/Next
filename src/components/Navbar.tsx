@@ -13,16 +13,13 @@ export default function Navbar() {
   const { openSignIn } = useClerk();
   const [isMounted, setIsMounted] = useState(false);
 
-  
   useEffect(() => {
     setIsMounted(true);
   }, []);
 
-
   useEffect(() => {
     if (isMounted && !isSignedIn) {
-      const isAuthPage = ['/sign-in', '/sign-up'].includes(pathname);
-      if (!isAuthPage) {
+      if (pathname === '/') {
         const timer = setTimeout(() => {
           openSignIn();
         }, 500);
