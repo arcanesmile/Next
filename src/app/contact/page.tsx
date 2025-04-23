@@ -1,7 +1,16 @@
+'use client'; 
 
+import { useAuth, RedirectToSignIn } from '@clerk/nextjs';
 import styles from "@/styles/contact.module.scss";
 
 const Contact = () => {
+  const { isLoaded, isSignedIn } = useAuth();
+
+  if (!isLoaded) return null;
+  if (!isSignedIn) {
+    return <RedirectToSignIn />;
+  }
+
   return (
     <div className={styles.contactPage}>
       <h1 className={styles.header}>Get in touch</h1>
@@ -23,7 +32,6 @@ const Contact = () => {
           </form>
         </div>
 
-        
         <div className={styles.contactDetails}>
           <div>
             <h3>Call Us</h3>
@@ -40,7 +48,6 @@ const Contact = () => {
         </div>
       </div>
 
-      
       <div className={styles.mapContainer}>
         <iframe
           src="https://maps.google.com/maps?q=makurdi&t=&z=13&ie=UTF8&iwloc=&output=embed"
